@@ -689,6 +689,99 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.12; letter-spacing: -.02em; font-weig
   .manifesto__grid { grid-template-columns: 1fr; gap: 32px; }
 }
 
+/* ---------- HERMES ---------- */
+.hermes { padding: 88px 0; }
+.hermes__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr);
+  gap: 44px;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 18% 0%, rgba(139, 92, 246, .18), transparent 44%),
+    radial-gradient(circle at 100% 100%, rgba(34, 211, 238, .12), transparent 46%),
+    rgba(255, 255, 255, .025);
+  box-shadow: var(--shadow-lg);
+}
+.hermes__list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hermes__list li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--text-dim);
+  font-size: 15px;
+  line-height: 1.55;
+}
+.hermes__list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #a7f3d0;
+  font-weight: 800;
+}
+.hermes__panel {
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius);
+  background: rgba(7, 8, 11, .62);
+  overflow: hidden;
+  box-shadow: 0 24px 70px -26px rgba(0, 0, 0, .7);
+}
+.hermes__terminal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--line);
+  color: var(--text-mute);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 12px;
+}
+.hermes__chat { padding: 18px; display: flex; flex-direction: column; gap: 12px; }
+.hermes__msg {
+  max-width: 92%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+.hermes__msg--in {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, .045);
+  color: var(--text-dim);
+  border: 1px solid var(--line);
+}
+.hermes__msg--out {
+  align-self: flex-end;
+  background: linear-gradient(135deg, rgba(139, 92, 246, .24), rgba(34, 211, 238, .16));
+  color: #fff;
+  border: 1px solid rgba(139, 92, 246, .28);
+}
+.hermes__chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 4px; }
+.hermes__chips span {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  color: #9ff6ff;
+  border: 1px solid rgba(34, 211, 238, .24);
+  background: rgba(34, 211, 238, .06);
+  border-radius: 999px;
+  padding: 5px 9px;
+}
+
+@media (max-width: 900px) {
+  .hermes { padding: 56px 0; }
+  .hermes__inner { grid-template-columns: 1fr; padding: 28px; }
+}
+
 /* ---------- CASES ---------- */
 .cases { padding: 88px 0; }
 
@@ -783,6 +876,14 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.12; letter-spacing: -.02em; font-weig
   background: rgba(255, 255, 255, .02);
   color: var(--text-dim);
 }
+
+.case__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+.case__links .btn { font-size: 13px; padding: 11px 14px; }
 
 .case__art {
   position: relative;
