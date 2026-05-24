@@ -1031,6 +1031,163 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.12; letter-spacing: -.02em; font-weig
   display: flex; gap: 6px; margin-top: 10px;
 }
 
+/* telegram page mockup */
+.tg-page {
+  width: min(100%, 380px);
+  margin: 0 auto;
+  border: 1px solid var(--line-2);
+  border-radius: 26px;
+  overflow: hidden;
+  background: #0d1117;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+.tg-page::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(34, 211, 238, .34), rgba(139, 92, 246, .22), transparent 70%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+.tg-page__cover {
+  height: 120px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(34, 211, 238, .38), transparent 34%),
+    radial-gradient(circle at 80% 30%, rgba(139, 92, 246, .42), transparent 36%),
+    linear-gradient(135deg, #172033, #0f766e 48%, #0b1020);
+}
+.tg-page__body {
+  padding: 0 18px 18px;
+}
+.tg-page__avatar {
+  width: 82px;
+  height: 82px;
+  margin-top: -41px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #061014;
+  font-weight: 800;
+  letter-spacing: -.03em;
+  font-size: 24px;
+  background: linear-gradient(135deg, #a7f3d0, #67e8f9);
+  border: 4px solid #0d1117;
+  box-shadow: 0 14px 40px -18px rgba(34, 211, 238, .9);
+}
+.tg-page__status {
+  float: right;
+  margin-top: -32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #a7f3d0;
+  font-size: 12px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+}
+.tg-page h4 {
+  margin: 12px 0 3px;
+  font-size: 20px;
+  color: #fff;
+}
+.tg-page__username {
+  margin: 0;
+  color: #6fd6ff;
+  font-size: 14px;
+  font-weight: 600;
+}
+.tg-page__bio {
+  margin: 12px 0 14px;
+  color: var(--text-dim);
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+.tg-page__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.tg-page__actions span {
+  display: inline-flex;
+  justify-content: center;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(34, 211, 238, .12);
+  border: 1px solid rgba(34, 211, 238, .25);
+  color: #9ff6ff;
+  font-weight: 700;
+  font-size: 12.5px;
+}
+.tg-page__actions span:first-child {
+  background: linear-gradient(135deg, rgba(34, 211, 238, .24), rgba(139, 92, 246, .18));
+  color: #fff;
+}
+.tg-page__section-title {
+  margin: 4px 0 10px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  color: var(--text-mute);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.tg-chat-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.tg-msg {
+  max-width: 86%;
+  padding: 9px 11px;
+  border-radius: 14px;
+  font-size: 12.5px;
+  line-height: 1.35;
+}
+.tg-msg--client {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, .055);
+  border-bottom-left-radius: 5px;
+  color: var(--text-dim);
+}
+.tg-msg--bot {
+  align-self: flex-end;
+  background: rgba(45, 212, 191, .16);
+  border: 1px solid rgba(45, 212, 191, .18);
+  border-bottom-right-radius: 5px;
+  color: #eafffb;
+}
+.tg-lead-note {
+  margin-top: 14px;
+  padding: 12px;
+  border: 1px solid rgba(52, 211, 153, .28);
+  border-radius: 14px;
+  background: rgba(52, 211, 153, .07);
+  display: grid;
+  gap: 4px;
+}
+.tg-lead-note span {
+  color: #a7f3d0;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+.tg-lead-note b {
+  color: #fff;
+  font-size: 13px;
+}
+.tg-lead-note em {
+  color: var(--text-dim);
+  font-style: normal;
+  font-size: 12px;
+}
+
 /* pipeline */
 .pipeline {
   background: var(--panel);
@@ -1630,6 +1787,7 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.12; letter-spacing: -.02em; font-weig
 .console,
 .pipeline,
 .phone,
+.tg-page,
 .sheet,
 .agents,
 .stack__col,
