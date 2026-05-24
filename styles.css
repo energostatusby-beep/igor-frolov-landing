@@ -782,6 +782,82 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.12; letter-spacing: -.02em; font-weig
   .hermes__inner { grid-template-columns: 1fr; padding: 28px; }
 }
 
+/* ---------- OPENCLAW ---------- */
+.openclaw { padding: 0 0 88px; }
+.openclaw__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, .9fr);
+  gap: 44px;
+  align-items: center;
+  padding: 40px;
+  border: 1px solid rgba(34, 211, 238, .26);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 12% 12%, rgba(34, 211, 238, .16), transparent 42%),
+    radial-gradient(circle at 100% 0%, rgba(16, 185, 129, .14), transparent 44%),
+    rgba(255, 255, 255, .022);
+  box-shadow: var(--shadow-lg);
+}
+.openclaw .lead a { color: #9ff6ff; text-decoration: none; }
+.openclaw .lead a:hover { text-decoration: underline; }
+.openclaw__stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 24px 0 2px;
+}
+.openclaw__stats div {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, .035);
+}
+.openclaw__stats b {
+  display: block;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  margin-bottom: 7px;
+}
+.openclaw__stats span {
+  display: block;
+  color: var(--text-dim);
+  font-size: 12px;
+  line-height: 1.35;
+}
+.openclaw__links { margin-top: 22px; }
+.openclaw__panel {
+  display: flex;
+  justify-content: center;
+}
+.tg-page--openclaw .tg-page__cover {
+  background:
+    radial-gradient(circle at 18% 22%, rgba(34, 211, 238, .42), transparent 34%),
+    radial-gradient(circle at 82% 20%, rgba(16, 185, 129, .35), transparent 38%),
+    linear-gradient(135deg, #061827, #0f172a 52%, #063b35);
+}
+.tg-agent-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 12px 0 14px;
+}
+.tg-agent-grid span {
+  padding: 6px 9px;
+  border-radius: 999px;
+  border: 1px solid rgba(34, 211, 238, .22);
+  background: rgba(34, 211, 238, .07);
+  color: #9ff6ff;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+}
+
+@media (max-width: 900px) {
+  .openclaw { padding: 0 0 56px; }
+  .openclaw__inner { grid-template-columns: 1fr; padding: 28px; }
+  .openclaw__stats { grid-template-columns: 1fr; }
+}
+
 /* ---------- CASES ---------- */
 .cases { padding: 88px 0; }
 
